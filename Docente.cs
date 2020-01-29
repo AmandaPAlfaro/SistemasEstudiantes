@@ -12,6 +12,8 @@ namespace Univercidad
         private static int codigo = 0;
         private string profesion;
         List<Materia> materia = new List<Materia>();
+        List<Docente> registrarDocentes = new List<Docente>();
+
         public Docente(string nombre)
         {
             this.nombre = nombre;
@@ -30,5 +32,12 @@ namespace Univercidad
             return nombre;
         }
 
+        public void mostrarDocente()
+        {
+            foreach (var item in this.registrarDocentes)
+            {
+                Console.WriteLine(item.getNombre());
+            }
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace Univercidad
         List<Materia> lmateria = new List<Materia>();
         List<Alumno> alumnosRegistrado = new List<Alumno>();
         List<Docente> registrarDocentes = new List<Docente>();
-
+     
         public Carrera(string nombre)
         {
             this.nombre = nombre;
@@ -31,10 +31,20 @@ namespace Univercidad
         {
             registrarDocentes.Add(docentes);
         }
+      
         public string getNombre()
         {
             return nombre;
+        }       
+
+        public void mostrarMaterias() 
+        {
+            foreach (var item in this.lmateria)
+            {
+                Console.WriteLine(item.getNombre());
+            }
         }
-         
+
+       
     }
 }

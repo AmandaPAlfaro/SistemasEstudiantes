@@ -10,6 +10,10 @@ namespace Univercidad
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("       ***Menu de sistemas***");
+            MenuSistema menuSistema = new MenuSistema();
+            menuSistema.menuPrincipal();
+
 
             Console.WriteLine("* UNIVERCIDAD *");
             Console.WriteLine();
@@ -29,7 +33,7 @@ namespace Univercidad
             univercidad.ingreseCarrera(enfermeria);
             univercidad.ingreseCarrera(informatica);
 
-            Console.WriteLine();           
+            Console.WriteLine();
             Console.WriteLine("Las carreras disponibles son: ");
             univercidad.imprimirCarreras();
             Console.WriteLine();
@@ -53,11 +57,11 @@ namespace Univercidad
 
             Console.WriteLine();
 
-            Console.WriteLine("Cual es la materia que decea pasar:");
+            Console.WriteLine("Cual es la materia que decea pasar: ");
+            string Materia= Console.ReadLine();
+            Materia Materia1 = new Materia(Materia);
             Console.WriteLine();
-            Materia Materia1 = new Materia();
-            string Materia = Console.ReadLine();
-
+       
             Console.WriteLine("Temarios");
             string temario = Console.ReadLine();
             Console.WriteLine();
@@ -70,7 +74,7 @@ namespace Univercidad
                 Alumno Alumno11 = new Alumno(nombreAlumno);
                 univercidad.ingreseAlumnos(Alumno11);
                 Console.WriteLine("El codigo del univercitario es:" + Alumno11.getCodigo());
-             
+
 
                 Console.WriteLine();
                 cont++;
@@ -98,43 +102,25 @@ namespace Univercidad
             Console.WriteLine("los estudiantes registrados son " + nombreAlumno1 + " \n Su carrera es: " + nombrecarrera);
             string nombreUniversitario1 = Console.ReadLine();
 
-
-          
-
-
             //Console.WriteLine("Ingrese el Nombre de la carrera que decea estudiar:");
             //string nombreCarrera = Console.ReadLine();
             //Alumno Carrera1 = new Alumno(nombreCarrera);
             //Console.WriteLine();
 
-            //Console.WriteLine("El codigo del carrera es:" + Carrera1.getCodigo());
+            //Console.WriteLine("El codigo de la carrera es:" + Carrera1.getCodigo());
             //Console.WriteLine();
 
-            Console.WriteLine("***DDOSENTES***");
+            Console.WriteLine("***DOCENTES***");
             Console.WriteLine("Ingrese el Nombre del Docente");
             string nombreDocente = Console.ReadLine();
-            Alumno Docente1= new Alumno(nombreDocente);
-            Console.WriteLine();
-
-            //Docentes eliminados
-
-
-            Console.WriteLine("Insertar la carrera que eliminara");
-            string docenteseliminar = Console.ReadLine();
-            univercidad.eliminarDocente(docenteseliminar);
-            Console.WriteLine();
-            Console.WriteLine("Los docentes son: ");
-            univercidad.imprimirCarreras();
-            Console.WriteLine();
+            Docente Docente1 = new Docente(nombreDocente);
+            Console.WriteLine();        
 
             Console.WriteLine("Profecion del docente");
             string profecion = Console.ReadLine();
             Console.WriteLine();
 
-            Console.WriteLine("El codigo del Docente es:" + Docente1.getCodigo());
-
-
-
+            //Console.WriteLine("El codigo del Docente es:" + Docente1.getCodigo());
 
             Console.ReadLine();
         }
